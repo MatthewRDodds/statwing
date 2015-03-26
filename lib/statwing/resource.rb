@@ -13,7 +13,6 @@ module Resource
   def request
     Net::HTTP::Post.new(uri, {'Content-Type' =>'application/json'}).tap do |config|
       config.basic_auth Statwing.configuration.api_key, ''
-      binding.pry
       config.body = data.to_json
     end  
   end

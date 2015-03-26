@@ -4,6 +4,9 @@ require 'virtus'
 require 'net/http'
 require 'json'
 
+require 'active_support'
+require 'active_support/core_ext/string'
+
 require 'statwing/resource'
 require 'statwing/dataset'
 require 'statwing/user'
