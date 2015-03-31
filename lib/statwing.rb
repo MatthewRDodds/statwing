@@ -1,34 +1,19 @@
 require 'statwing/version'
 
-require 'virtus'
-require 'net/http'
+require 'pry'
 require 'json'
+require 'net/http'
 
 require 'active_support'
 require 'active_support/core_ext/string'
 
-require 'statwing/resource'
+require 'faraday_middleware'
+require 'her'
+
+require 'statwing/parser'
+require 'statwing/authentication'
+require 'statwing/configuration'
+require 'statwing/api'
+
 require 'statwing/dataset'
 require 'statwing/user'
-
-module Statwing
-	class Configuration
-    attr_accessor :api_key
-
-    def initialize
-      @api_key = ''
-    end
-  end
-
-  class << self
-    attr_writer :configuration
-
-	  def configuration
-	    @configuration ||= Configuration.new
-	  end
-
-	  def configure
-	    yield(configuration)
-	  end
-  end
-end

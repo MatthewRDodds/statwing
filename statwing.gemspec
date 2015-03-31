@@ -17,7 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'virtus'
+  spec.add_runtime_dependency 'her'
+  spec.add_runtime_dependency 'faraday_middleware'
   spec.add_runtime_dependency 'activesupport'
 
   spec.add_development_dependency 'bundler', '~> 1.7'
