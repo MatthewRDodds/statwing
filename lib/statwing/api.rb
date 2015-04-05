@@ -1,11 +1,8 @@
-Her::API.setup url: Statwing::API_URL do |c|
-	# c.use Statwing::Parser
+ssl_options = { verify: true, verify_mode: OpenSSL::SSL::VERIFY_NONE }
 
-  c.use Faraday::Request::UrlEncoded
-  c.use Her::Middleware::ParseJSON
+Her::API.setup url: Statwing::API_URL, ssl: ssl_options do |c|
 	c.use Statwing::Authentication
-  # # c.use FaradayMiddleware::EncodeJson
-
+	c.use Faraday::Request::UrlEncoded
+  c.use Statwing::Parser
   c.use Faraday::Adapter::NetHttp
-  # c.ssl[:verify] = true
 end
