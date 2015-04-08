@@ -4,7 +4,7 @@ module Statwing
 	    json = JSON.parse(env[:body], :symbolize_names => true)
 	    error = json.delete(:error) || {}
 
-	    # Fail to parse when request returns an error
+	    # Raise error when request returns an error
 	    if error.present?
 	    	fail "#{error[:type].classify}: #{error[:message]}"
 	    end
