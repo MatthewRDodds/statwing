@@ -39,7 +39,6 @@ Creating a User and associating a new dataset:
 
 @user.datasets
 => [#<Statwing::Dataset:0x3fff3d5fe0d4>]
-Statwing::Dataset.create(fileurl: 'https://gist.github.com/sandbox/6983768/raw/81e00eff263d6ac9fdedbe28de7d33dc8e850f2f/statwing.csv',name: 'statwing.csv',shared: 'restricted',action: 'add',users: [{object: 'user_id', data: 'usr_cNUWGust9V9xPFdXg6Ggv5rUnO7b3mUa'}])
 
 @dataset.attributes
 => {"name"=>"real-estate-transactions-sample.csv",
