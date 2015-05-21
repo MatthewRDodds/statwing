@@ -9,8 +9,8 @@ describe Statwing::User do
           {},
           {users:
           [
-            { id: 1, name: "Tobias Fünke" },
-            { id: 2, name: "Lindsay Fünke" }
+            { id: 1, name: "Michael Scott" },
+            { id: 2, name: "Dwight Shrute" }
           ]
           }.to_json
         ]
