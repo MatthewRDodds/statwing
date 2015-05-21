@@ -4,4 +4,3 @@ module Statwing
     include Creatable
   end
 end
-
