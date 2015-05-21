@@ -35,7 +35,6 @@ describe Statwing::Parser do
   subject { Statwing::Parser.new }
 
   it 'raises error if response contains error' do
-    'AuthenticationFailure: authentication failed for api key'
     expect do
       subject.on_complete(error_env)
     end.to raise_error(RuntimeError, "#{error_type}: #{error_msg}")
