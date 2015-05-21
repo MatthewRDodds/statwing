@@ -1,5 +1,7 @@
 # Statwing
 
+[![Build Status](https://travis-ci.org/MatthewRDodds/statwing.svg?branch=add-specs)](https://travis-ci.org/MatthewRDodds/statwing)
+
 Ruby wrapper for the Statwing Api. This is accomplished using the [HER](https://github.com/remiprev/her) Object Relational Mapper.
 
 ## Installation

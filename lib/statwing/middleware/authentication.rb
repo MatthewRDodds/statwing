@@ -1,8 +1,12 @@
 module Statwing
   class Authentication < Faraday::Middleware
-    def call(env)
+    def add_header(headers)
       key = Base64.encode64(Statwing.configuration.api_key).gsub!("\n", '')
-      env[:request_headers]["Authorization"] = "Basic #{key}:"
+      headers.merge! "Authorization" => "Basic #{key}:"
+    end
+
+    def call(env)
+      add_header(env[:request_headers])
 
       @app.call(env)
     end
